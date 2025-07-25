@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Temperature converter", "Temperature converter\Temperature converter.vcxproj", "{5127DB37-9DB8-4727-A859-017CA2724B80}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "note picker", "note picker\note picker.vcxproj", "{514EFE21-4A01-4423-9398-ABABA07E9BE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Debug|x64.ActiveCfg = Debug|x64
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Debug|x64.Build.0 = Debug|x64
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Debug|x86.ActiveCfg = Debug|Win32
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Debug|x86.Build.0 = Debug|Win32
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Release|x64.ActiveCfg = Release|x64
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Release|x64.Build.0 = Release|x64
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Release|x86.ActiveCfg = Release|Win32
+		{5127DB37-9DB8-4727-A859-017CA2724B80}.Release|x86.Build.0 = Release|Win32
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Debug|x64.ActiveCfg = Debug|x64
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Debug|x64.Build.0 = Debug|x64
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Debug|x86.ActiveCfg = Debug|Win32
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Debug|x86.Build.0 = Debug|Win32
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Release|x64.ActiveCfg = Release|x64
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Release|x64.Build.0 = Release|x64
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Release|x86.ActiveCfg = Release|Win32
+		{514EFE21-4A01-4423-9398-ABABA07E9BE4}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97DB06A4-FEEF-4FD7-95FE-A15EE0A3071C}
+	EndGlobalSection
+EndGlobal
