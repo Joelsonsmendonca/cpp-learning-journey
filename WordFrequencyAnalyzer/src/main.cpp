@@ -2,6 +2,7 @@
 #include <cctype>
 #include <sstream>
 #include <locale>
+#include <map>
 #include <vector>
 
 int main() {
@@ -27,18 +28,45 @@ The little green patch was no longer forgotten. It had become a tiny, vibrant sa
 
 Lily still visited her oak tree every day. She knew she hadn't saved it alone. It was the small acts of many that had made the difference. And as she watched a tiny finch feed its fledgling in the shoebox birdhouse, she understood that even the smallest gesture of kindness could grow into something beautiful and strong, something that could even save a kingdom.)""" "\n";
 
-	std::string cleanPhrase = "";
+	std::stringstream ss;
+	ss << originalPhrase;
 
+	std::map<std::string, int> wordCountMap;
+	std::string nextStr = "";
+	
 
+	while (ss >> nextStr) {
 
+		std::string cleanPhrase = "";
+		int lastPullIndex = 0;
+		for (char &c : nextStr) {
 
-	for (char &c : originalPhrase) {
-
-		if (!ispunct(c)) {
-			c = std::tolower(c, std::locale());
-
-			cleanPhrase = cleanPhrase + c;
+			++lastPullIndex;
+			if (!ispunct(c)) {
+				cleanPhrase.push_back(std::tolower(c, std::locale()));
+			}
+			else
+				break;
 		}
+
+		if (lastPullIndex != nextStr.size() - 1) {
+
+			std::string leftover = nextStr.substr(lastPullIndex);
+
+			ss << ' ' << leftover;
+		}
+		
+		
+		if (wordCountMap.find(cleanPhrase) == wordCountMap.end()) {
+			wordCountMap.insert({ cleanPhrase, 1 });
+		}
+		else
+			wordCountMap[cleanPhrase] += 1;
+
 	}
-	std::cout << cleanPhrase;
+
+	for (std::pair<const std::string, int> & pair : wordCountMap) {
+		std::cout << "Word: " << pair.first << " is repeated: " << pair.second << " times" << std::endl;
+	}
+	
 }
