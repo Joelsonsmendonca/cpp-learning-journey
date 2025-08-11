@@ -1,11 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <random>
-#include <locale.h>
 
 int main() {
-
-	std::setlocale(LC_ALL, "");
 
 	int smallestNumber = 0;
 
@@ -13,14 +10,15 @@ int main() {
 	std::srand(std::time(nullptr));
 
 	for (int i = 0; i < 12; i++) {
-		int number = std::rand() % 100;
+		int number = std::rand() % 100 - 50;
 		randomNumbers.push_back(number);
 	}
 
 
-	if (!randomNumbers.empty()) {
 
-		smallestNumber = randomNumbers[0];
+	smallestNumber = randomNumbers[0];
+
+	if (!randomNumbers.empty()) {
 
 		for (int i = 0; i < randomNumbers.size(); i++) {
 
@@ -32,9 +30,7 @@ int main() {
 
 		}
 
-		std::cout << "The smallest number is: " << smallestNumber << std::endl;
+		std::cout << smallestNumber;
 	}
-	else
-		std::cout << "The numbers is empty" << std::endl;
 
 }
