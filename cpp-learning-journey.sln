@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Smallest Number Finder", "S
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bubble sort algorith", "Bubble sort algorith\Bubble sort algorith.vcxproj", "{53F7B69D-F3A4-47E3-AF1A-F02236C1325E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Another way to make a bubble sort", "Another way to make a bubble sort\Another way to make a bubble sort.vcxproj", "{A085CBEF-F92A-43F5-95C2-E2A733A58B34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{53F7B69D-F3A4-47E3-AF1A-F02236C1325E}.Release|x64.Build.0 = Release|x64
 		{53F7B69D-F3A4-47E3-AF1A-F02236C1325E}.Release|x86.ActiveCfg = Release|Win32
 		{53F7B69D-F3A4-47E3-AF1A-F02236C1325E}.Release|x86.Build.0 = Release|Win32
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Debug|x64.ActiveCfg = Debug|x64
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Debug|x64.Build.0 = Debug|x64
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Debug|x86.ActiveCfg = Debug|Win32
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Debug|x86.Build.0 = Debug|Win32
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Release|x64.ActiveCfg = Release|x64
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Release|x64.Build.0 = Release|x64
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Release|x86.ActiveCfg = Release|Win32
+		{A085CBEF-F92A-43F5-95C2-E2A733A58B34}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
