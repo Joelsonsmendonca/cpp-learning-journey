@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <numeric>   // Para a função std::iota
-#include <random>    // Para o gerador de números aleatórios moderno
-#include <algorithm> // Para a função std::shuffle
+#include <numeric>  
+#include <random>   
+#include <algorithm> 
 
 int main() {
 
