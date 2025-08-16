@@ -49,7 +49,7 @@ std::vector<int> generateRandomNumbers(int numberOfNumbers) {
 
 	for (int i = 0; i < numberOfNumbers; ++i) {
 		
-		int number = std::rand() % 101 - 50;
+		int number = std::rand() %101 - 50;
 
 		randomNumbers.push_back(number);
 
