@@ -1,0 +1,3 @@
+// utility.inl
+
+#pragma once
