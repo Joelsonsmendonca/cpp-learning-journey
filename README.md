@@ -21,5 +21,5 @@ This repository is organized into a single Visual Studio Solution containing mul
 
 ## 🔗 Connect with Me
 
--   **Portfolio Website:** [joelsonsmendonca.github.io/portfolio-site/](https://joelsonsmendonca.github.io/portfolio-site/)
+-   **Website:** [https://joelsonmendonca.com/](https://joelsonmendonca.com/)
 -   **LinkedIn:** [linkedin.com/in/joelsonmendonca/](https://www.linkedin.com/in/joelsonmendonca/)
