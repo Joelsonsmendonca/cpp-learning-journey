@@ -1,6 +1,6 @@
 #include <iostream>
 #include <windows.h> // The only new part we need
-#include <thread>    // For the sleep
+#include <thread> // For the sleep
 #include <random>
 
 struct Stream {
