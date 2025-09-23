@@ -25,6 +25,7 @@ dist/
 *.exe
 *.out
 *.app
+*/main
 
 # # Arquivos de configuração do editor e do usuário
 #
