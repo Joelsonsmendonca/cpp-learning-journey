@@ -7,7 +7,7 @@ public: //anything under public is accessable out side.
 
     //constructor is a function that has no ruteurn type, and has the same name as the class.
     Student(const std::string& studentName, int studentID, int studentYear)
-            :name{studentName}, ID{studentID}, Year{studentYear} // more performant tha doing the assignement in the body of the contructor
+            :name{ new std::string{studentName}}, ID{studentID}, Year{studentYear} // more performant tha doing the assignement in the body of the contructor
     {
         //OR 
         //name = studentName;
@@ -22,8 +22,14 @@ public: //anything under public is accessable out side.
         std::cout << "Default contructor called"<< std::endl;
     
     }
+    ~Student()
+    {
+        std::cout << "student " << *name << " is destructed" << std::endl;
+        delete name; 
+    }
 
-    std::string name; //member variables
+
+    std::string* name; //member variables
     int ID;
     int Year;
 private:
@@ -32,7 +38,7 @@ private:
 
 
 int main(){
-    Student studentOne{"Sam", 0002, 1};
+    Student student{"Sam", 0002, 1};
     /*
     studentOne.name = "Sam";
     studentOne.ID = 0001;
@@ -40,7 +46,7 @@ int main(){
     */
     //std::cout << "The student name is: " << studentOne.name << " ID: " << studentOne.ID << " Year: " << studentOne.Year << std::endl;
 
-    Student studentTwo{"Emily", 0002,02};
+    //Student studentTwo{"Emily", 0002,02};
     /*
     studentTwo.name = "Emily";
     studentTwo.ID = 0002;
@@ -48,15 +54,15 @@ int main(){
 */
     //std::cout << "The student name is: " << studentTwo.name << " ID: " << studentTwo.ID << " Year: " << studentTwo.Year << std::endl;
     
-    std::vector<Student> students = {studentOne, studentTwo};
+    //std::vector<Student> students = {studentOne, studentTwo};
 
-    for(Student& student : students){
+    /*for(Student& student : students){
 
         std::cout << "Student name: " << student.name << std::endl;
         std::cout << "Student ID: " << student.ID << std::endl;
         std::cout << "Student year" << student.Year << std::endl;
 
-    }
+    }*/
 
 
 }
