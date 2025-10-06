@@ -62,7 +62,9 @@ public: //anything under public is accessable out side.
         delete name; 
     }
 
-    void setId(int newID){
+    //setters
+    void setId(int newID)
+    {
 
 
         if(newID < 0){
@@ -72,8 +74,9 @@ public: //anything under public is accessable out side.
 
         ID = newID;
     }
-    
-    int GetID(){
+    //getters
+    int GetID()
+    {
         return ID;
     } 
 
