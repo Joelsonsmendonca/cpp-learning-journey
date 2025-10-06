@@ -22,24 +22,80 @@ public: //anything under public is accessable out side.
         std::cout << "Default contructor called"<< std::endl;
     
     }
-    ~Student()
+
+
+    void SayHello(){
+        std::cout << "Hello, my name is " << *name << std::endl;
+    }
+
+
+    void incrementYear(){
+        Year++;
+        switch (Year)
+        {   
+            case 1:
+                std::cout << *name << " Freshman" << std::endl;
+                break;
+            case 2:
+                std::cout << *name << " Sophomore" << std::endl;
+                break;
+            case 3:
+                std::cout << *name << " Junior" << std::endl;
+                break;
+            case 4:
+                std::cout << *name << " Senior" << std::endl;
+                break;
+            default:
+                std::cout << *name << " Graduated" << std::endl;
+                break;
+        }
+        
+    }
+
+    bool isGraduated(){
+        return Year > 4;
+    }
+
+        ~Student()
     {
         std::cout << "student " << *name << " is destructed" << std::endl;
         delete name; 
     }
 
+    void setId(int newID){
+
+
+        if(newID < 0){
+            std::cout << "Wrong id value, should be positive" << std::endl;
+            return;
+        }
+
+        ID = newID;
+    }
+    
+    int GetID(){
+        return ID;
+    } 
 
     std::string* name; //member variables
+    private:
     int ID;
-    int Year;
-private:
+    int Year; //to have member in the private section. aand provide functions to ajust to alter the value.
     int secret;
 };
 
 
 int main(){
-    Student student{"Sam", 0002, 1};
-    /*
+
+    Student student{"Sam", 0002, 0};
+    student.SayHello();
+    std::cout << student.GetID() << std::endl;
+
+    while(!student.isGraduated()){
+        student.incrementYear();
+    }
+
+        /*
     studentOne.name = "Sam";
     studentOne.ID = 0001;
     studentOne.Year = 01;
