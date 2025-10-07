@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 class Student{ 
 
@@ -23,12 +22,12 @@ public: //anything under public is accessable out side.
     
     }
 
-
-    void SayHello(){
+    //an accessor function
+    void SayHello() const{
         std::cout << "Hello, my name is " << *name << std::endl;
     }
 
-
+    //mutator, modifier function
     void incrementYear(){
         Year++;
         switch (Year)
@@ -52,7 +51,7 @@ public: //anything under public is accessable out side.
         
     }
 
-    bool isGraduated(){
+    bool isGraduated() const{
         return Year > 4;
     }
 
@@ -63,7 +62,7 @@ public: //anything under public is accessable out side.
     }
 
     //setters
-    void setId(int newID)
+   /* void setId(int newID) this function will not work because ID is a const variable.
     {
 
 
@@ -73,16 +72,16 @@ public: //anything under public is accessable out side.
         }
 
         ID = newID;
-    }
+    }*/
     //getters
-    int GetID()
+    int GetID() const // always make const if not will modify any member variable.
     {
         return ID;
     } 
 
-    std::string* name; //member variables
     private:
-    int ID;
+    std::string* name; //member variables
+    const int ID; //a student should have the ID. // always consider const for member variable as well.
     int Year; //to have member in the private section. aand provide functions to ajust to alter the value.
     int secret;
 };
@@ -91,31 +90,34 @@ public: //anything under public is accessable out side.
 int main(){
 
     Student student{"Sam", 0002, 0};
-    student.SayHello();
+    //student.setId(1234); this function call will not work because ID is a const variable.
+    std::cout << student.GetID() << std::endl;
+
+    /*student.SayHello();
     std::cout << student.GetID() << std::endl;
 
     while(!student.isGraduated()){
         student.incrementYear();
     }
 
-        /*
+        
     studentOne.name = "Sam";
     studentOne.ID = 0001;
     studentOne.Year = 01;
-    */
+    
     //std::cout << "The student name is: " << studentOne.name << " ID: " << studentOne.ID << " Year: " << studentOne.Year << std::endl;
 
     //Student studentTwo{"Emily", 0002,02};
-    /*
+    
     studentTwo.name = "Emily";
     studentTwo.ID = 0002;
     studentTwo.Year = 02;
-*/
+
     //std::cout << "The student name is: " << studentTwo.name << " ID: " << studentTwo.ID << " Year: " << studentTwo.Year << std::endl;
     
     //std::vector<Student> students = {studentOne, studentTwo};
 
-    /*for(Student& student : students){
+    for(Student& student : students){
 
         std::cout << "Student name: " << student.name << std::endl;
         std::cout << "Student ID: " << student.ID << std::endl;
